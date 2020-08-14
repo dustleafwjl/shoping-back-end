@@ -23,6 +23,7 @@ public class ProductController {
         return ResponseEntity.created(null).header("index", String.valueOf(index)).build();
     }
 
+    @CrossOrigin
     @GetMapping("/products")
     public ResponseEntity getProducts() {
         return ResponseEntity.ok(productService.getProducts());
