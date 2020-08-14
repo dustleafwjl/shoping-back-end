@@ -16,6 +16,7 @@ public class ProductController {
         this.productService = productService;
     }
 
+    @CrossOrigin
     @PostMapping("/product")
     public ResponseEntity registerUser(@Valid @RequestBody Product product) {
         int index = productService.addProduct(product);
