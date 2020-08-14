@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "order")
+@Table(name = "shoporder")
 @Data
 @Builder
 @AllArgsConstructor
@@ -20,6 +20,8 @@ public class OrderDto {
 
     private int quantity;
 
-//    ProductDto product;
+
+    @Column(name = "product_id")
+    private int productId;
 
 }
